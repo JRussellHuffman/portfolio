@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The work of Joel Russell Huffman</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="The portfolio of Joel Russell Huffman, user experience designer, web developer, and interactive installation developers">
+	<meta name="keywords" content="interaction design, visual design, web development, user experience design, interactive environments, installations, art">
+	<meta name="author" content="Joel Russell Huffman">
+	<meta name="theme-color" content="#f44336">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/content.js"></script>
+	<script type="text/javascript" src="js/snap.svg-min.js"></script>
+	<script type="text/javascript" src="js/svgLogo.js"></script>
+	<script type="text/javascript" src="js/xray.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- google recaptcha -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+	<!-- google analytics -->
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-72115837-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+</head>
+<body onload="CanvasPreload()">
+	<div class="headContainer">
+		<div class="header">
+			<div class="logoContainer">
+				<!-- logo loaded here -->
+			</div>
+			<div class="menu">
+				<h3 class="menuItem"><a href="#design">Design</a></h3>
+				<h3 class="menuItem"><a href="#about">About</a></h3>
+				<h3 class="menuItem"><a href="#contact">Contact</a></h3>
+			</div>
+			<div class="menuButton" onclick="twist ()">
+	            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	             viewBox="0 0 50.1 34.9" enable-background="new 0 0 50.1 34.9" xml:space="preserve">
+	                <rect id="line1" width="50" height="5" fill="#fff"/>
+	                <rect id="line2" y="15" width="50" height="5" fill="#fff"/>
+	                <rect id="line3" y="30" width="50" height="5" fill="#fff"/>
+	            </svg>
+	        </div>
+	        <div id="slideMenu">
+		        <ul id="menu">
+    				<li class="headerMenu"><a class="menuItem three" href="#design">Design</a></li>
+                    <li class="headerMenu"><a class="menuItem one" href="#about">About</a></li>
+                    <li class="headerMenu"><a class="menuItem two" href="#contact">Contact</a></li>
+                </ul>
+		    </div>
+		</div>
+	</div>
+	<div class="headPadding" id="top"></div>
+	<div class="deskContainer">
+		<canvas id="overlayCanvas"></canvas>
+		<div class="tagline">
+			<h1 class="tagline">Art, Design, Technology, and the places they collide</h1>
+		</div>
+    </div>
+    <div class="canvasSpacer"></div>
+    <div class="hash" id="design"></div>
+    <div class="container">
+	    <div class="title">
+	    	<h1 class="title">Design Projects</h1>
+	    </div>
+		<div class="thumbContainer">
+			<!-- project dynamically added here -->
+		</div>
+	</div>
+	<div class="hash" id="about"></div>
+	<div class="container">
+		<div class="title">
+	    	<h1 class="title">About Me</h1>
+	    </div>
+	    <div class="video-container">
+	    	<iframe width="100%" height="400" src="https://www.youtube.com/embed/Eg9l_yNvsnk" frameborder="0" allowfullscreen></iframe>
+	    </div>
+	    <div class="resume"><a href="assets/JRussellHuffman_Resume5-16-16.pdf" target="_blank" class="resume"><h1>Open Resum&eacute; PDF</h1></a></div>
+	    <div class="aboutContainer">
+	    	<div class="about" id="aboutText">
+	    		<div id="me">
+	    		<img src="assets/me.jpg">
+	    	</div>
+	    		<h2 id="contactSection">Connect with me</h2>
+				<a href="mailto:jrussellhuffman@gmail.com" target="_blank">jrussellhuffman@gmail.com</a><br>
+				<a href="https://www.behance.net/jrussellhuffman" target="_blank">Behance</a><br>
+				<a href="https://vimeo.com/user8682163" target="_blank">Vimeo</a><br>
+				<a href="https://github.com/JRussellHuffman" target="_blank">Github</a><br>
+				<a href="https://www.linkedin.com/in/russell-huffman-4bb00658">LinkedIn</a>
+
+				<h2>Education</h2>
+				<p>MS in Digital Media at Georgia Tech.
+				Graduated Spring 2016</p>
+
+				<p>BA in Fine Art from Georgia College and State University.
+				Graduated Spring 2012</p>
+
+				<h2>Who I am</h2>
+
+				<p>My name is Joel Russell Huffman but most people call me Russell. I am an designer, developer, and artist based out of Atlanta, Georgia. My purpose in life is to be creative and I do so in everything I do, whenever I can. When I am not writing javascript or scribbling design ideas, I am cooking, gardening, or playing guitar. The process of doing and creating drives me. I absolutely love working on unique projects and I am grateful that I can help others through my creativity.</p>
+
+				<p>Being creative is my passion. When I was 16, I discovered my love for the visual arts and eventually came to study fine art at GCSU. College afforded me the opportunity to explore all mediums, where I discovered that working on the computer allows me to best express myself. After graduation I worked in interpretation design working with cultural history and storytelling. This lead me to graduate school where I studied Digital Media at Georgia Tech, where I recently graduated. I love working with storytelling, cultural history, civic engagement, and education applications of new media. If any of this sounds interesting to you, please reach out to me! I love talking about my passions.</p>
+			</div>
+	    	<div class="about" id="resume">
+	    		<!-- <a href="assets/JRussellHuffman_Resume1-20-16.pdf" target="_blank" class="resume"><h1>Open Resum&eacute; PDF</h1></a> -->
+				<h2>Work Experience</h2>
+				<h3>Georgia Institute of Technology (Atlanta, GA) 
+				January 2016 to May 2016, Research Assistant</h3>
+				<p>Responsibilities: To Identify and develop platform needs and to conduct product and literature reviews of existing platforms/processes and develop supporting infrastructure that enable project studio work to proceed, and to implement features into the project website.</p>
+
+				<h3>Georgia Institute of Technology (Atlanta, GA) 
+				August 2015 to December 2015, Teaching Assistant</h3>
+				<p>Responsibilities: assist in leading lessons for the Intro to Computational Media class of over 75 undergraduate students, lead workshops outside of class, and grade papers, assignments, and projects</p>
+
+				<h3>Porsche Cars North America(Atlanta, GA) 
+				April 2015 to Sept 2015, Intern Web Developer</h3>
+				<p>Responsibilities: develop interactive applications and manage digital content as a part of the Digitalization team within Porsche Cars North America.</p>
+
+				<h3>Georgia Institute of Technology (Atlanta, GA) 
+				August 2014 to December 2015, Research Assistant</h3>
+				<p>Responsibilities: designing, illustrating and programming an interactive map to visualize research on pharmaceutical production in Johannesburg, South Africa. </p>
+
+
+				<h3>Signature Design (Atlanta, GA)
+				May 2012 to May 2015, Associate Interpretive Designer</h3>
+				<p>Responsibilities: web design, map design, computer rendering, animation, as well as marketing and consulting new clients. Projects include national heritage areas, nature preserves, historic neighborhoods, and schools</p>
+
+
+				<h3>AllPoints, LLC (Peachtree City, GA) 
+				November 2013 to February 2014, Director of Motion Graphics </h3>
+				<p>Responsibilities: creation of digital media components for various projects, such as video game assets, introductions and credits to videos, company branding, graphic elements, and illustrations for promotions.</p>
+
+
+				<h3>The 42nd Floor, LLC (Milledgeville, GA) 
+				January 2011 to May 2012, Graphic Designer and Assistant Manager </h3>
+				<p>Responsibilities: graphic design for custom apparel, consultation and correspondence with clientele, and management of storefront. Work included on-the-spot graphic design for clients in Photoshop and on-the-spot printing of garments. </p>
+
+				<h3>DVL Design Group (Roswell, GA)
+				January 2008 to June 2008, Draftsman, Renderer, and Illustrator </h3>
+				<p>Responsibilities: drafting, rendering, and illustration for landscape architecture projects in land planning and residential development. Projects required computer rendering, pencil and marker rendering, graphic design, and drafting.</p>
+	    	</div>
+	    </div>
+	</div>
+	<div class="hash" id="contact"></div>
+	<div class="container">
+	    <div class="title">
+	    	<h1 class="title">Contact Me</h1>
+	    </div>
+	    <div class="contactContainer">
+	    	<div id="contactme">
+	            <form action="submit.php" method="post">
+	            <div class="info">
+	                <span class="contact">Your name</span>
+	                <input type="text" name="cf_name"><br>
+	                <span class="contact">Your e-mail</span>
+	                <input type="text" name="cf_email"><br>
+	            </div>
+	            <div class="g-recaptcha" id="captcha" data-sitekey="6LeEHg0TAAAAAORDk6ltQjSet2RrXgIWbEM9Z0Uk"></div>
+	            <div class="message">
+		            <span class="contact">Message</span>
+		            <textarea name="cf_message"></textarea>
+	            </div>
+	            <input id="submit" type="submit" value="Send">
+	            <input id="reset" type="reset" value="Clear">
+	            </form>
+	        </div>
+	        <img src="assets/footerOverlay.png" id="buildings">
+	    </div>
+    </div>
+	<!-- lightbox -->
+	<div class="lightbox">
+		<div class="bg"></div>
+		<div class="side" id="close"><h3>Back to Projects</h3></div>
+		<div class="side" id="open"><h3>open in new tab</h3></div>
+		<div class="fg" id="content">
+			<div class="project">
+				<!-- projects dynamically added here -->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		$("div.logoContainer").load("logo.html");
+
+	</script>
+
+	<script type="text/javascript" src="js/thumbHandler.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+</body>
+</html>
