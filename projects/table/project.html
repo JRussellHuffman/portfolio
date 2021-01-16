@@ -1,0 +1,41 @@
+<div class="popText table">
+	<h1 class="pop">Trees Atlanta Table</h1>
+	<p class="pop">The purpose of this project is to simulate the process of ecological succession in the form of an interactive children’s installation at the Trees Atlanta TreeHouse, in Atlanta, Georgia. The table contains an embedded screen, a “seed ball” (ping pong ball) that rolls around on top of the screen, and a fan to blow the seed ball around. When the seed ball is blown around, it leaves digital seeds behind it on the table that then grow. The seeds first produce arable land where small shrubs then grow, followed by softwood trees, and ultimately hardwood trees. Each tree can drop it’s own seeds, and eventually a forest grows on the table. In the spirit of ecological success, a “disaster” happens when the user jumps on the tile on the floor and the table resets. The process of growing the forest then starts over again.</p>
+</div>
+<img class="pop" src="projects/table/01.jpg">
+<div class="popText table">
+	<h3 class="pop">The Challenge:</h3>
+	<p class="pop">The main challenge of the installation was to create something that a child could interact with but also to be educational in a clear way. We decided to create a loose adoption of cellular automaton based off of Conway’s Game of Life in order to demonstrate the life cycle of trees in the forest. For the interaction, we wanted to simulate seed dispersal, which is typically done by birds or wind in the early stages of ecological succession. In order to do so, we create a “seed ball” that is monitored with computer vision from a camera above the installation. The ball, which is wedged between the screen and glass, is blown around using a fan aimed at gaps on the side of the installation.</p>
+</div>
+<video width="100%" height="100%" controls>
+	<source src="projects/table/trees2.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+<div class="popText table">
+	<h3 class="pop">Technologies Used:</h3>
+	<ol class="pop">
+		<li>Processing for the simulation of ecological succession</li>
+		<li>OpenCV for detecting the ball on top of the screen</li>
+		<li>Arduino and Piezo floor tile for the tile input</li>
+		<li>Odroid single board computer to bring it all together</li>
+	</ol>
+</div>
+<video width="100%" height="100%" controls>
+	<source src="projects/table/trees1.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+<div class="popText table">
+	<h3 class="pop">Moving Forward:</h3>
+	<p class="pop">Although the system is installed and running, it won’t be shown publicly until January. In that time, a few additions still need to be made. We are casting a clear acrylic molded landscape with mountains and rivers that will be placed on top of the screen. The ball will roll on top of the landscape to demonstrate how plants thrive in certain areas, but not in other areas. A better camera will also be mounted above the installation for further stability and calibration of the system.</p>
+</div>
+<img class="pop" src="projects/table/02.jpg">
+<div class="popText table">
+	<h3 class="pop">What I Learned:</h3>
+	<ol class="pop">
+		<li>Real world installation requirements</li>
+		<li>Cellular automation</li>
+		<li>Piezo tile input</li>
+		<li>Computer vision color sensing as an input</li>
+	</ol>
+</div>
+<img class="pop" src="projects/table/03.jpg">
