@@ -58,14 +58,14 @@ function loadURL (hash) {
 	window.history.pushState({
 		"html": "/portfolio/index.html",
 		"pageTitle": "something",
-	},"","/projects.html#" + hash);
+	},"","/portfolio/projects.html#" + hash);
 }
 
 function revertURL () {
 	window.history.pushState({
 		"html": "/portfolio/index.html",
 		"pageTitle": "something",
-	},"","/index.html");
+	},"","/portfolio/index.html");
 }
 
 lightboxClick();
