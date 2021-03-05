@@ -56,14 +56,14 @@ function idClick () {
 
 function loadURL (hash) {
 	window.history.pushState({
-		"html": "/index.html",
+		"html": "/portfolio/index.html",
 		"pageTitle": "something",
 	},"","/projects.html#" + hash);
 }
 
 function revertURL () {
 	window.history.pushState({
-		"html": "/index.html",
+		"html": "/portfolio/index.html",
 		"pageTitle": "something",
 	},"","/index.html");
 }
