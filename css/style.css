@@ -916,6 +916,7 @@ img#header {
 	div.tagline {
 	    top: 275px;
 	    width: 400px;
+			max-width: 100%;
 	    /* margin-left: -200px; */
 	}
 	h1.tagline {
