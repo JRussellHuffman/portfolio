@@ -49,7 +49,7 @@ function idClick () {
 		};
 		loadURL(thisID); //add the ID as a hash to the new url
 		if (docWidth < 550) {
-			location.reload();
+			// location.reload();
 		}
 	})
 }
