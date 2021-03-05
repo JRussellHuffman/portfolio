@@ -47,7 +47,7 @@ function idClick () {
 				$("div.project").load("projects/" + content[i].title + "/project.html")
 			}
 		};
-		loadURL(thisID); //add the ID as a hash to the new url
+		// loadURL(thisID); //add the ID as a hash to the new url
 		if (docWidth < 550) {
 			location.reload();
 		}
@@ -71,7 +71,7 @@ function revertURL () {
 lightboxClick();
 idClick();
 
-//for thumb content 
+//for thumb content
 
 function addThumb() {
 	var contentThumbs = [];

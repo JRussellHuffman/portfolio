@@ -1,7 +1,7 @@
 body {
 	margin:0;
 	font-family:Helvetica, Arial, sans-serif;
-	background:#ccc;
+	background:#F2F4F8;
 	font-weight: lighter;
 	margin:0px;
 }
@@ -16,9 +16,10 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	/* font-family: 'IBM Plex Sans', serif; */
 	font-family: 'Josefin Slab', serif;
 	-webkit-margin-before: 0;
-    -webkit-margin-after: 0;
+  -webkit-margin-after: 0;
 }
 
 h2 {
@@ -26,7 +27,7 @@ h2 {
 }
 
 h3 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 p {
@@ -44,6 +45,10 @@ ul {
     -webkit-margin-after: 0;
 }
 
+p {
+	max-width: 600px;
+}
+
 /* header */
 
 div.header {
@@ -57,7 +62,7 @@ div.headContainer {
 	top: 0;
 	width: 100%;
 	height: 50px;
-	background: #F44336;
+	background: #343A3F;
 	z-index: 2;
 	box-shadow: 0px 0px 10px #000;
 }
@@ -69,14 +74,16 @@ div.headPadding {
 }
 
 div.logoContainer{
-    position: relative;
-    float: left;
+	position: absolute;
+	float: left;
 }
 
 /* header menu */
 
 div.menu {
+	position: relative;
 	float: right;
+  z-index: 100;
 }
 
 h3.menuItem {
@@ -149,16 +156,15 @@ div.canvasSpacer {
 
 div.tagline {
 	position: fixed;
-	left:50%;
-	top:370px;
-	width:550px;
-	margin-left: -275px;
+	left: 20%;
+	top: 200px;
+	max-width: 800px;
 }
 
 h1.tagline {
-	color: #F44336;
-	font-size: 2.6em;
-	font-weight: 700;
+	color: #121619;
+	font-size: 5.5em;
+	font-weight: 100;
 	line-height: 1.2em;
 }
 
@@ -166,7 +172,7 @@ h1.tagline {
 div.title {
 	position: relative;
 	background: white;
-	color: #F44336;
+	color: #343A3F;
 	text-align: center;
 	padding:20px;
 }
@@ -224,13 +230,13 @@ div.resume {
 
 span.thumb {
     width: 80%;
-    height: 60%;
+    height: 80%;
     color: #fff;
-    background: rgba(255,67,54,.75);
+    background: rgba(52,58,63,.75);
     position: absolute;
-    padding: 40% 10% 0;
+    padding: 20% 10% 0;
     display: none;
-    text-align: center;
+    text-align: left;
     font-family: 'Josefin Slab', serif;
     font-weight: 600px;
     font-size: 24px;
@@ -239,7 +245,7 @@ span.thumb {
 
 div.thumb {
 	position: relative;
-	background: #F44336;
+	background: #343A3F;
 	float: left;
 	width: 20%; /* could also be 12.5 */
 }
@@ -256,10 +262,10 @@ div.featured {
 
 div.pullOut {
 	position: absolute;
-	top:40%;
+	top:20%;
 	color: white;
 	width: 100%;
-	text-align: center;
+	text-align: left;
 }
 
 h1.pullOut {
@@ -294,7 +300,7 @@ h2#contactSection {
 
 div#me {
 	float:right;
-	width: 25%;
+	width: 20%;
 	margin:0 0 20px 20px;
 }
 
@@ -355,21 +361,23 @@ div.contactContainer {
 div.contactContainer img {
     position: absolute;
     left: 50%;
-    bottom: 121px;
-    margin-left: -400px;
+    bottom: 70px;
+    margin-left: -393px;
     max-width: none;
 }
 
 input#submit {
-	float:left;
+	float:right;
     width: 100px;
-    margin-left: 125px;
+    margin-left: 20px;
+		padding:20px;
 }
 
 input#reset {
-	float:left;
+	float:right;
 	width: 100px;
-	margin-left: 20px;
+	padding:20px;
+	/* margin-left: 20px; */
 }
 
 /* lightbox */
@@ -396,19 +404,19 @@ div.fg {
 	z-index: 3;
 	max-width: 100%;
 	box-shadow: 0 0 15px black;
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 div.side {
 	position: fixed;
     background: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 2px;
     top: 100%;
     z-index: 12;
     right: 50%;
-    width: 60px;
-    margin-right: -605px;
+    /* width: 60px; */
+    margin-right: -560px;
     cursor: pointer;
     box-shadow: 0 0 15px black;
 }
@@ -432,19 +440,22 @@ div.testSpacer {
 div.popText {
 	position: relative;
 	padding-top: 50px;
-	box-shadow: 0px 0px 10px #000;
+	box-shadow: 0px 0px 3px rgb(0 0 0 / 50%);
+	background: #F2F4F8;
+}
+
+.pop {
+
+	color:black;
 }
 
 h1.pop {
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    text-align: center;
-    padding: 50px;
-    padding-top: 0;
-    font-size: 3em;
-    font-weight: 600;
-    color: white;
-    text-decoration: underline;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	padding: 50px 200px;
+	padding-top: 0;
+	font-size: 3em;
+	font-weight: 500;
 }
 
 h3.pop {
@@ -452,20 +463,20 @@ h3.pop {
     -webkit-margin-after: 0em;
     padding: 0 200px 20px;
     font-size: 1.75em;
-    color: #fff;
+    /* color: #fff; */
 }
 
 p.pop {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     padding: 0 200px 50px;
-    color: white;
+    /* color: white; */
     line-height: 1.5em;
 }
 
 ol.pop {
     padding: 0 220px 50px;
-    color: white;
+    /* color: white; */
     display: block;
     list-style-type: decimal;
     -webkit-margin-before: 0em;
@@ -488,6 +499,11 @@ div.public {
 	background: #009a66;
 }
 
+div.qiskit_brand {
+	background: #F2F4F8;
+	color:#000;
+}
+
 div.ithemba {
 	background: #7b8954;
 }
@@ -501,11 +517,11 @@ div.sketchbook {
 }
 
 div.porsche {
-	background: #000;
+	/* background: #000; */
 }
 
 div.table {
-	background: #7da268;
+	/* background: #7da268; */
 }
 
 div.wedding {
@@ -513,11 +529,11 @@ div.wedding {
 }
 
 div.dollar {
-	background: #5f7243;
+	/* background: #5f7243; */
 }
 
 div.domes {
-	background: #7dbb8c;
+	/* background: #7dbb8c; */
 }
 
 div.bike {
@@ -533,12 +549,41 @@ div.trust {
 }
 
 div.giants {
-	background: #50abfe;
+	/* background: #50abfe; */
+}
+
+div.dice {
+	padding-left: 200px;
+	padding-bottom: 20px;
+}
+h3.dice {
+	padding-left: 0;
+}
+
+h1.dice {
+	padding-left: 0;
+}
+
+div.joy {
+	padding-left: 200px;
+	padding-bottom: 20px;
+}
+h3.joy {
+	padding-left: 0;
+}
+
+h1.joy {
+	padding-left: 0;
 }
 
 /* alignment test */
 div#domes {
 	float:right;
+}
+
+img#header {
+	position: fixed;
+	top: 0;
 }
 
 /* screen sizes */
@@ -653,10 +698,7 @@ div#domes {
 		margin-right: -555px;
 	}
 	div.side {
-	    margin-right: -555px;
-	}
-	div.side {
-	    margin-right: -555px;
+	    margin-right: -515px;
 	}
 }
 
@@ -681,7 +723,7 @@ div#domes {
 	}
 
 	div.side {
-	    margin-right: -505px;
+	    margin-right: -465px;
 	}
 }
 
@@ -720,13 +762,21 @@ div#domes {
 	h3.pop {
 		 padding: 0 100px 50px;
 	}
+	h1.pop {
+		 padding: 0 100px 50px;
+	}
 
 	ol.pop {
 		 padding: 0 100px 50px;
 	}
 
 	div.side {
-	    margin-right: -455px;
+	    margin-right: -415px;
+	}
+	div#me {
+		float:right;
+		width: 40%;
+		margin:0 0 20px 20px;
 	}
 }
 
@@ -750,7 +800,12 @@ div#domes {
 		margin-right: -405px;
 	}
 	div.side {
-	    margin-right: -405px;
+	    margin-right: -365px;
+	}
+	div#me {
+		float:right;
+		width: 40%;
+		margin:0 0 20px 20px;
 	}
 }
 
@@ -784,6 +839,12 @@ div#domes {
 		display: none;
 	}
 
+	div#me {
+		float:right;
+		width: 50%;
+		margin:0 0 20px 20px;
+	}
+
 }
 
 @media (max-width: 750px) {
@@ -811,6 +872,12 @@ div#domes {
 	    margin-left: -235px;
 	    padding-right: 0;
 	    display: block;
+	}
+
+	div#me {
+		float:right;
+		width: 50%;
+		margin:0 0 20px 20px;
 	}
 }
 
@@ -849,7 +916,10 @@ div#domes {
 	div.tagline {
 	    top: 275px;
 	    width: 400px;
-	    margin-left: -200px;
+	    /* margin-left: -200px; */
+	}
+	h1.tagline {
+		font-size: 4em;
 	}
 
 	div.fg {
@@ -862,10 +932,11 @@ div#domes {
 @media (max-width: 550px) {
 	div.tagline {
 	    top: 180px;
-	    width: 300px;
+	    /* width: 300px; */
 	    margin-left: 0;
 	    left: 0;
 	    margin: 20px;
+			font-size: .7em;
 	}
 
 	div.header {
@@ -901,6 +972,9 @@ div#domes {
 	h3.pop {
 		 padding: 0 20px 50px;
 	}
+	h3.pop {
+		 padding: 0 20px 50px;
+	}
 
 	ol.pop {
 		 padding: 0 40px 50px;
@@ -912,5 +986,10 @@ div#domes {
 
 	div.video-container {
 		width:90%;
+	}
+	div#me {
+		float:right;
+		width: 100%;
+		margin:0 0 20px 20px;
 	}
 }

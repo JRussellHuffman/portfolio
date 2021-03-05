@@ -1,27 +1,42 @@
 var content = [
 	{
-		"title" : "porsche",
-		"thumbText" : "Porsche Digitalization",
+		"title" : "qiskit_site",
+		"thumbText" : "Qiskit.org Design Lead",
 		"thumbType" : "featured",
 	},
+	// {
+	// 	"title" : "table",
+	// 	"thumbText" : "Trees Atlanta Table",
+	// 	"thumbType" : "standard",
+	// },
 	{
-		"title" : "table",
-		"thumbText" : "Trees Atlanta Table",
+		"title" : "discovery",
+		"thumbText" : "IBM Watson Discovery",
 		"thumbType" : "standard",
 	},
 	{
 		"title" : "none",
-		"thumbText" : "Interactive Environments",
+		"thumbText" : "Design for quantum computing",
 		"thumbType" : "pullout",
 	},
+	// {
+	// 	"title" : "public",
+	// 	"thumbText" : "Public Development",
+	// 	"thumbType" : "standard",
+	// },
 	{
-		"title" : "public",
-		"thumbText" : "Public Development",
+		"title" : "qiskit_brand",
+		"thumbText" : "Qiskit Brand",
 		"thumbType" : "standard",
 	},
+	// {
+	// 	"title" : "explorers",
+	// 	"thumbText" : "Explorers Beacon Project",
+	// 	"thumbType" : "standard",
+	// },
 	{
-		"title" : "explorers",
-		"thumbText" : "Explorers Beacon Project",
+		"title" : "IQX",
+		"thumbText" : "IBM Quantum Experience",
 		"thumbType" : "standard",
 	},
 	{
@@ -36,69 +51,109 @@ var content = [
 	// },
 	{
 		"title" : "none",
-		"thumbText" : "Web Development",
+		"thumbText" : "Design for AI",
 		"thumbType" : "pullout",
+	},
+	{
+		"title" : "compare",
+		"thumbText" : "Watson Compare & Comply",
+		"thumbType" : "standard",
+	},
+	{
+		"title" : "none",
+		"thumbText" : "Design for people",
+		"thumbType" : "pullout",
+	},
+	// {
+	// 	"title" : "sketchbook",
+	// 	"thumbText" : "My GA Sketchbook",
+	// 	"thumbType" : "standard",
+	// },
+	{
+		"title" : "porsche",
+		"thumbText" : "Porsche Digitalization",
+		"thumbType" : "featured",
 	},
 	{
 		"title" : "giants",
 		"thumbText" : "Giants in the Sky",
 		"thumbType" : "standard",
 	},
+	// {
+	// 	"title" : "wedding",
+	// 	"thumbText" : "Happy Huffmans",
+	// 	"thumbType" : "standard",
+	// },
+	// {
+	// 	"title" : "clientcenters",
+	// 	"thumbText" : "IBM Quantum client center design",
+	// 	"thumbType" : "standard",
+	// },
 	{
 		"title" : "none",
-		"thumbText" : "Storytelling",
+		"thumbText" : "Design for the future",
 		"thumbType" : "pullout",
 	},
+	// {
+	// 	"title" : "ithemba",
+	// 	"thumbText" : "Mapping iThemba",
+	// 	"thumbType" : "standard",
+	// },
+	// {
+	// 	"title" : "dollar",
+	// 	"thumbText" : "Dollar Bill Buying Power",
+	// 	"thumbType" : "standard",
+	// },
+	// {
+	// 	"title" : "none",
+	// 	"thumbText" : "Design for a better future",
+	// 	"thumbType" : "pullout",
+	// },
 	{
-		"title" : "sketchbook",
-		"thumbText" : "My GA Sketchbook",
+		"title" : "ducks",
+		"thumbText" : "Wild Ducks Playing Cards",
 		"thumbType" : "standard",
 	},
 	{
-		"title" : "dollar",
-		"thumbText" : "Dollar Bill Buying Power",
+		"title" : "alphabet",
+		"thumbText" : "Quantum Alphabet",
 		"thumbType" : "standard",
 	},
 	{
-		"title" : "wedding",
-		"thumbText" : "Happy Huffmans",
+		"title" : "dice",
+		"thumbText" : "Quantum Dice",
 		"thumbType" : "standard",
 	},
 	{
-		"title" : "ithemba",
-		"thumbText" : "Mapping iThemba",
+		"title" : "joy",
+		"thumbText" : "Joy Vazirani",
 		"thumbType" : "standard",
 	},
-	{
-		"title" : "none",
-		"thumbText" : "Responsive Design",
-		"thumbType" : "pullout",
-	},
-	{
-		"title" : "bike",
-		"thumbText" : "Cyclist Signals",
-		"thumbType" : "standard",
-	},
-	{
-		"title" : "none",
-		"thumbText" : "User Experience Design",
-		"thumbType" : "pullout",
-	},
-	{
-		"title" : "munchkin",
-		"thumbText" : "Munchkin Counter Web App",
-		"thumbType" : "standard",
-	},
-	{
-		"title" : "none",
-		"thumbText" : "High Fidelity Prototyping",
-		"thumbType" : "pullout",
-	},
-	{
-		"title" : "clarkston",
-		"thumbText" : "Visualize Clarkston",
-		"thumbType" : "standard",
-	},
+	// {
+	// 	"title" : "bike",
+	// 	"thumbText" : "Cyclist Signals",
+	// 	"thumbType" : "standard",
+	// },
+	// {
+	// 	"title" : "none",
+	// 	"thumbText" : "User Experience Design",
+	// 	"thumbType" : "pullout",
+	// },
+	// {
+	// 	"title" : "munchkin",
+	// 	"thumbText" : "Munchkin Counter Web App",
+	// 	"thumbType" : "standard",
+	// },
+	// {
+	// 	"title" : "none",
+	// 	"thumbText" : "High Fidelity Prototyping",
+	// 	"thumbType" : "pullout",
+	// },
+	// {
+	// 	"title" : "clarkston",
+	// 	"thumbText" : "Visualize Clarkston",
+	// 	"thumbType" : "standard",
+	// },
 	// {
 	// 	"title" : "trust",
 	// 	"thumbText" : "TrustWorth",
