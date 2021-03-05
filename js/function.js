@@ -58,7 +58,7 @@ function loadURL (hash) {
 	window.history.pushState({
 		"html": "/portfolio/index.html",
 		"pageTitle": "something",
-	},"","/portfolio/projects.html#" + hash);
+	},"","/portfolio/index.html#" + hash);
 }
 
 function revertURL () {
