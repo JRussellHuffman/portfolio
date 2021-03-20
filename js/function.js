@@ -3,48 +3,64 @@ var docWidth = $(document).width();
 // for index.html
 function lightboxClick () {
 	$("div.standard, div.featured").click(function() {
-		$("div.lightbox").fadeIn();
-		$("div.fg").animate({
-			"top":"5px",
-		})
-		$("div#close").animate({
-			"top":"5px",
-		})
-		$("div#open").animate({
-			"top":"90px",
-		})
-		$("body").css({
-			"overflow" : "hidden",
-		})
-
-		goBack();
-	})
+		openContent();
+	});
 
 	$("div.bg, div#close").click(function() {
-		$("div.lightbox").fadeOut();
-		$("div.fg").animate({
-			"top":"100%",
-		})
-		$("div#close").animate({
-			"top":"100%",
-		})
-		$("div#open").animate({
-			"top":"100%",
-		})
-		$("div.project").empty();
-		revertURL();
-		$("body").css({
-			"overflow" : "auto",
-		})
+		closeContent();
 	})
 }
+
+function openContent() {
+	$("div.lightbox").fadeIn();
+	$("div.fg").animate({
+		"top":"5px",
+	})
+	$("div#close").animate({
+		"top":"5px",
+	})
+	$("div#open").animate({
+		"top":"90px",
+	})
+	$("body").css({
+		"overflow" : "hidden",
+	})
+
+	console.log("ran open content");
+
+	goBack();
+}
+
+function closeContent() {
+	$("div.lightbox").fadeOut();
+	$("div.fg").animate({
+		"top":"100%",
+	})
+	$("div#close").animate({
+		"top":"100%",
+	})
+	$("div#open").animate({
+		"top":"100%",
+	})
+	$("div.project").empty();
+	revertURL();
+	$("body").css({
+		"overflow" : "auto",
+	})
+}
+
+$(document).keyup(function(e) {
+     if (e.key === "Escape") {
+        closeContent();
+    }
+});
 
 function idClick () {
 	$("div.standard, div.featured").click(function() {
 		var thisID = $(this).attr("id")
 		for (var i = 0; i < content.length; i++) {
 			if (content[i].title == thisID) {
-				$("div.project").load("projects/" + content[i].title + "/project.html")
+				$("div.project").load("projects/" + content[i].title + "/project.html") //get the content to fill the modal
 			}
 		};
 		loadURL(thisID); //add the ID as a hash to the new url
@@ -55,17 +71,24 @@ function idClick () {
 }
 
 function loadURL (hash) {
-	window.history.pushState({
-		"html": "/portfolio/index.html",
-		"pageTitle": "something",
-	},"","/portfolio/index.html#" + hash);
+	// window.location.hash = hash;
+	// window.location = '#'+hash;
+
+	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '#'+hash;
+	window.history.pushState({ path: newurl }, '', newurl);
+	// window.history.pushState({
+	// 	"html": "/portfolio/index.html",
+	// 	"pageTitle": "something",
+	// },"","/portfolio/index.html#" + hash);
 }
 
 function revertURL () {
-	window.history.pushState({
-		"html": "/portfolio/index.html",
-		"pageTitle": "something",
-	},"","/portfolio/index.html");
+	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+	window.history.pushState({ path: newurl }, '', newurl);
+	// window.history.pushState({
+	// 	"html": "/portfolio/index.html",
+	// 	"pageTitle": "something",
+	// },"","/portfolio/index.html");
 }
 
 lightboxClick();
@@ -117,7 +140,8 @@ function checkHash() {
 	if(window.location.hash) {
 	  var withHash = window.location.hash;
 	  contentHash = withHash.slice( 1 ); //remove the hash and store just the value
-	  console.log(contentHash)
+	  console.log(contentHash);
+		openContent();
 	} else {
 	  console.log("no hash");
 	}
