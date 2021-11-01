@@ -1,0 +1,92 @@
+<div class="popText">
+	<h1 class="pop">Redesigning the Qiskit Textbook</h1>
+	<h3 class="pop">Project Summary</h3>
+	<p class="pop">The Qiskit textbook has slowly become one of the most content-robust, free resources for learning quantum computing available today. But as the content continued to develop, it became clear that the textbook was outgrowing its platform. At its core, it was basically a series of Jupyter Notebooks stitched together and accessible via the web. The content was being held back and we knew the textbook could be so much more. This write up will discuss the design process of taking the Qiskit Textbook from its roots to a user-centric, fully scalable, modern web platform that we genuinely believe is the best way to learn quantum computing.
+	<br>
+	<br>
+	The live site can be found <a href="https://learn.qiskit.org/">here</a>. </p>
+
+	<img class="pop" src="projects/qiskit_textbook/01.png">
+</div>
+<div class="popText">
+
+	<h3 class="pop">Is it really a textbook?</h3>
+	<p class="pop">The name is a bit of a misnomer, because the “textbook” has become more of a learning platform than a standard textbook. The name comes from its original intent, which was to be a university supplement. In the nascent field of quantum computing, universities have relatively limited teaching resources, and a single, cohesive resource targeted specifically at quantum computing fundamentals was scarce. Thus, the Qiskit textbook was born, originally named “Learn Quantum Computing using Qiskit.” Even though the textbook is digital, it still fundamentally acts as a textbook, which prompts some of my favorite guiding questions that have allowed us to include more features than we could in a printed book.</p>
+
+	<ol class="pop">
+		<li>What does it mean to be a textbook in a digital format?</li>
+		<li>How can a digital textbook fully exploit digital affordances to create the best learning experience possible while still being a textbook?</li>
+	</ol>
+
+	<h3 class="pop">The team</h3>
+	<p class="pop">Before talking about the project itself, I would like to thank the amazing team I worked with to build this new textbook. The team was lead by Leron Gil as Product Owner, Salva de la Puente as Engineering Lead, and Russell Huffman as Design Lead (me), alongside the education team that creates the content, with Frank Harkins as Content Lead supported by James Wootton for content development. The development team consists of Yaiza Garcia, Va Barbosa, Eddybrando Vásquez, Randy Tolentino, Gregorio Iniesta, and Abdón Rodríguez. This blog will largely focus on the design aspect of the Qiskit Textbook, but I would be remiss to not mention the incredibly talented, interdisciplinary, and multinational team that I get to work with every day. Thank you, all of you.</p>
+
+	<h3 class="pop">Getting started</h3>
+	<p class="pop">The recent Qiskit textbook beta release was a big milestone for us, but there were several steps we took to make sure it felt seamless to our users. The very first step was taking the existing Qiskit textbook and updating it to the Qiskit design standards without adding or changing any functionality or platform capabilities. The textbook originally looked like the following screenshot.</p>
+	<img class="pop" src="projects/qiskit_textbook/02.png">
+</div>
+<div class="popText">
+	<p class="pop">By updating the textbook styling to match the Qiskit design guidelines, we were able to start thinking about expanding the user experience. Below is an image of the first branded update to the Qiskit textbook–the previous edition.</p>
+	<img class="pop" src="projects/qiskit_textbook/03.png">
+</div>
+<div class="popText">
+	<p class="pop">While the initial pass at the textbook was happening, we were scoping out the best experience for a new textbook platform and constantly asking ourselves what the future of textbooks should look like. As we worked, we happened across a platform with similar goals to ours, called <a href="https://mathigon.org/" target="_blank">Mathigon</a>, lead by Philipp Legner. Leron Gil, our Product Owner, established a partnership to adopt the Mathigon platform for the Qiskit textbook so that we could leverage the expanded toolkit of functionality.</p>
+	<img class="pop" src="projects/qiskit_textbook/04.png">
+</div>
+<div class="popText">
+	<h3 class="pop">Prototyping</h3>
+	<p class="pop">We eventually established a vision for expanding the textbook with a few fundamental goals:</p>
+	<ol class="pop">
+		<li>Better support new learners, while maintaining a high standard of quality for our more advanced users.</li>
+		<li>Make more robust use of digital opportunities, including interactive components, progress tracking, running inline code, etc.</li>
+		<li>Build the textbook on a modern, stable foundation that enables content creators to continue to make good content.</li>
+	</ol>
+	<p class="pop">The development team began working on the third goal. Simultaneously, our lead content creator (Frank Harkins), one of our developers (Goyo Iniesta), and myself began prototyping towards the first two goals. Having a working team that includes content, design, and development was instrumental to delivering the experience that we ultimately shipped.</p>
+	<p class="pop">The first prototype was reworking the Grover’s algorithm page, a cornerstone algorithm in quantum computing and a decent starting place for prototyping an interactive experience. The end result was a clickable prototype that we could circulate among users and stakeholders to get a feel for the direction we were hoping to head.</p>
+	<img class="pop" src="projects/qiskit_textbook/05.png">
+</div>
+<div class="popText">
+	<p class="pop">Given the feedback from the first prototype, we began working on a second prototype for the Quantum Volume page of the textbook. This prototype had a greater emphasis on content strategy. The goal of this prototype was to go all the way into production to test the production cycle of an entire page. The final version of this page is live and can be found here: <a href="https://learn.qiskit.org/course/quantum-hardware/measuring-quantum-volume" target="_blank">https://learn.qiskit.org/course/quantum-hardware/measuring-quantum-volume</a></p>
+	<img class="pop" src="projects/qiskit_textbook/06.png">
+</div>
+<div class="popText">
+	<h3 class="pop">From prototype to production</h3>
+	<p class="pop">After we were happy with the second prototype, we split the work of scaling up to the full platform into two primary efforts: platform development and content development. The platform goal was around creating a stable foundation that contained all the features scoped out by the prototype, and making it all available to future content creators and page authors. The content work was to create the best introductory course to quantum computing possible, given all the features and enhancements thus far scoped out.</p>
+	<h3 class="pop">Platform updates</h3>
+	<p class="pop">The authors of the Qiskit Textbook have thus far been writing all the pages in Jupyter notebooks, which we wanted to keep in the new platform. Therefore, one of the main infrastructural innovations of the new textbook was to create a parser that would allows authors to keep creating content in Jupyter Notebooks, but rendering those pages with all the other features of the platform. In an effort to stay focused on design, I won’t write more about that here, but it is important to acknowledge this as a core component of the Qiskit Textbook.</p>
+	<p class="pop">We also gave the platform front end some significant feature enhancements. We introduced a right side panel that contains “lesson notes” and a “glossary” of quantum computing terminology. This panel will eventually include many more features still to come. We also created many inline features that work across the platform, such as vocabulary and mathematical annotations that will help those less familiar with linear algebra get more familiar with the math notation.</p>
+	<img class="pop" src="projects/qiskit_textbook/06.png">
+</div>
+<div class="popText">
+	<h3 class="pop">Introduction to quantum computing course</h3>
+	<p class="pop">The intro course has become our internal gold standard for content creation in terms of how to properly leverage all of our new abilities, including demos, quizzes, graphics, interactive elements and writing style. The final introduction learning course can be found here: <a href="https://learn.qiskit.org/course/introduction/why-quantum-computing" target="_blank">https://learn.qiskit.org/course/introduction/why-quantum-computing</a>.</p>
+	<p class="pop">The introduction course began by defining a content strategy, led by Frank Harkins. Below you can see the work that went into defining our content structure, color coded to indicate the type of content that will be used per page.</p>
+	<img class="pop" src="projects/qiskit_textbook/08.png">
+</div>
+<div class="popText">
+	<p class="pop">Once we defined the strategy, we created every page in Figma. The content team (myself, Frank Harkins, and Goyo Iniesta) then worked on the pages by going through the text as it was written and fleshing out graphics and interactive opportunities. It is worth noting that the three of us live in three different countries, but our workflow allowed us to work together without many issues. We worked together via Webex once a week, and worked asynchronously via Figma on the other days. The final intro course is live and is already one of the best performing pages in the Qiskit Textbook.</p>
+	<p class="pop">Without being exhaustive, some of the material I am most proud of in the textbook are the follow.</p>
+	<p class="pop">Some of the designed components I am most proud of in the textbook are the “mini composer” and the “drag and drop code exercise”, which I will briefly highlight, starting with the mini composer.</p>
+	<h3 class="pop">The mini composer</h3>
+	<img class="pop" src="projects/qiskit_textbook/09.png">
+</div>
+<div class="popText">
+	<p class="pop">The goal of the “mini composer” is to introduce learners to the user experience of the full IBM Quantum Composer that many use to understand quantum circuits, but with the minimum amount of information necessary to begin using the tool. It also allows content creators to succinctly introduce concepts with minimal but meaningful interaction from the user.</p>
+	<h3 class="pop">Drag and drop code</h3>
+	<img class="pop" src="projects/qiskit_textbook/10.png">
+</div>
+<div class="popText">
+	<p class="pop">This type of interaction pattern is not new, and has many different names, such as a “Parson’s Problem.” It seemed like a natural fit to introduce to the Qiskit Textbook. The drag and drop code component is a way of allowing the users to interact with the code, but in a controlled environment. Ultimately, one of our goals is to get users writing Qiskit code, and this component is an early step in that direction.</p>
+	<p class="pop">Both interactions have thus far proved to be effective learning tools with a high engagement rate. We are continuing to test and validate interactive features as they are developed, such as these:</p>
+	<img class="pop" src="projects/qiskit_textbook/11.gif">
+	<br>
+	<br>
+	<br>
+<!-- </div>
+<div class="popText"> -->
+	<p class="pop">And speaking of testing, let’s take a second to talk about testing and research.</p>
+	<h3 class="pop">User Research</h3>
+	<p class="pop">We performed user research periodically throughout the product development lifecycle to validate the decisions that we were making and the designs that we were producing. We employed a handful of different types of user testing methods, alongside quantitative methods, to validate our decisions throughout the duration of this project. For all our user testing efforts, we partnered with our Design Research team that works across all of IBM Quantum (thank you for all the help Elizabeth Quigley and Kristen Zelenke Lee). The research we did included card sort activities, 1-on-1 virtual in person interviews, Customer Effort Score-based surveys, and more. We are also lucky enough to have a very active engaged community, especially the Qiskit Advocates, with whom it was easy to share design mock ups and prototypes directly via Slack. I believe we arrived at a much better product release by doing user research at every major step along way of product development.</p>
+	<h3 class="pop">Where do we go from here?</h3>
+	<p class="pop">We have big dreams and high hopes for the Qiskit Textbook. All of the work described above was a small subset what went into the new Qiskit Textbook and it is still just the beginning. Take a look for yourself here <a href="https://learn.qiskit.org">https://learn.qiskit.org/</a>. We hope to continue to grow and expand both the content and the platform in a way that fosters a community of learners that will someday be the future workforce of quantum computing. Stay tuned.</p>
+</div>

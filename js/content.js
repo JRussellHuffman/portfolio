@@ -1,9 +1,14 @@
 var content = [
 	{
-		"title" : "qiskit_site",
-		"thumbText" : "Qiskit.org Design Lead",
+		"title" : "qiskit_textbook",
+		"thumbText" : "Qiskit Textbook",
 		"thumbType" : "featured",
 	},
+	// {
+	// 	"title" : "qiskit_site",
+	// 	"thumbText" : "Qiskit.org Design Lead",
+	// 	"thumbType" : "featured",
+	// },
 	// {
 	// 	"title" : "table",
 	// 	"thumbText" : "Trees Atlanta Table",
