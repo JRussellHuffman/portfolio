@@ -26,4 +26,9 @@ function thumbnail (ti, te, ty, num) {
 		var activeDiv = "div[data-id='"+ this.itemNumber + "']";
 		$(activeDiv).append('<img class="thumb" src="assets/blank.png">');
 	}
+	this.addArchive = function addArchive() {
+		var activeDiv = "div[data-id='"+ this.itemNumber + "']";
+		$(activeDiv).append('<h4 class="archive" id="'+this.itemTitle+'">'+ this.itemText +'</h4>');
+		// $(activeDiv).attr('id', this.itemTitle);
+	}
 }

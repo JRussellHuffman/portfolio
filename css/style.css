@@ -32,6 +32,13 @@ h3 {
 	font-weight: 400;
 }
 
+h4.archive {
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	padding:20px;
+	cursor: pointer;
+}
+
 p {
 	line-height: 1.4em;
 }
@@ -201,7 +208,14 @@ div.thumbContainer {
 	background: white;
 	margin: 0 auto;
 	width: 1800px;
-	/*padding: 0 6%;*/
+}
+
+div.archiveContainer {
+	position: relative;
+	overflow: auto;
+	background: white;
+	margin: 0 auto;
+	width: 1800px;
 }
 
 img.thumb {
@@ -254,6 +268,12 @@ div.thumb {
 	background: #343A3F;
 	float: left;
 	width: 20%; /* could also be 12.5 */
+}
+
+div.archive {
+	background: white;
+	/* width: auto; */
+	height: 100px;
 }
 
 div.standard {
@@ -498,11 +518,11 @@ div.projectContainer {
 /* individual projects */
 
 div.explorers {
-	background: #2196f3;
+	/* background: #2196f3; */
 }
 
 div.public {
-	background: #009a66;
+	/* background: #009a66; */
 }
 
 div.qiskit_brand {
@@ -511,15 +531,15 @@ div.qiskit_brand {
 }
 
 div.ithemba {
-	background: #7b8954;
+	/* background: #7b8954; */
 }
 
 div.clarkston {
-	background: #0084aa;
+	/* background: #0084aa; */
 }
 
 div.sketchbook {
-	background: #737373;
+	/* background: #737373; */
 }
 
 div.porsche {
@@ -531,7 +551,7 @@ div.table {
 }
 
 div.wedding {
-	background: #6e5373;
+	/* background: #6e5373; */
 }
 
 div.dollar {
@@ -543,15 +563,15 @@ div.domes {
 }
 
 div.bike {
-	background: #871c1c;
+	/* background: #871c1c; */
 }
 
 div.munchkin {
-	background: #7c3c0a;
+	/* background: #7c3c0a; */
 }
 
 div.trust {
-	background: #000000;
+	/* background: #000000; */
 }
 
 div.giants {
@@ -584,6 +604,10 @@ h1.joy {
 
 /* alignment test */
 div#domes {
+	/* float:right; */
+}
+
+div#teleportation {
 	float:right;
 }
 
@@ -596,6 +620,9 @@ img#header {
 
 @media (max-width: 1850px) {
 	div.thumbContainer {
+		width: 1700px;
+	}
+	div.archiveContainer {
 		width: 1700px;
 	}
 
@@ -626,6 +653,11 @@ img#header {
 	div.thumbContainer {
 		width: 1600px;
 	}
+
+	div.archiveContainer {
+		width: 1600px;
+	}
+
 	div.header {
 		width: 1600px;
 	}
@@ -640,6 +672,11 @@ img#header {
 	div.thumbContainer {
 		width: 1500px;
 	}
+
+	div.archiveContainer {
+		width: 1500px;
+	}
+
 	div.header {
 		width: 1500px;
 	}
@@ -652,6 +689,11 @@ img#header {
 	div.thumbContainer {
 		width: 1400px;
 	}
+
+	div.archiveContainer {
+		width: 1400px;
+	}
+
 	div.header {
 		width: 1400px;
 	}
@@ -664,6 +706,11 @@ img#header {
 	div.thumbContainer {
 		width: 1300px;
 	}
+
+	div.archiveContainer {
+		width: 1300px;
+	}
+
 	div.header {
 		width: 1300px;
 	}
@@ -676,6 +723,11 @@ img#header {
 	div.thumbContainer {
 		width: 1200px;
 	}
+
+	div.archiveContainer {
+		width: 1200px;
+	}
+
 	div.header {
 		width: 1200px;
 	}
@@ -688,6 +740,11 @@ img#header {
 	div.thumbContainer {
 		width: 1100px;
 	}
+
+	div.archiveContainer {
+		width: 1100px;
+	}
+
 	div.header {
 		width: 1100px;
 	}
@@ -712,6 +769,11 @@ img#header {
 	div.thumbContainer {
 		width: 1000px;
 	}
+
+	div.archiveContainer {
+		width: 1000px;
+	}
+
 	div.header {
 		width: 1000px;
 	}
@@ -737,6 +799,11 @@ img#header {
 	div.thumbContainer {
 		width: 900px;
 	}
+
+	div.archiveContainer {
+		width: 900px;
+	}
+
 	div.header {
 		width: 900px;
 	}
@@ -790,6 +857,11 @@ img#header {
 	div.thumbContainer {
 		width: 800px;
 	}
+
+	div.archiveContainer {
+		width: 800px;
+	}
+
 	div.header {
 		width: 800px;
 	}
@@ -817,6 +889,10 @@ img#header {
 
 @media (max-width: 850px) {
 	div.thumbContainer {
+		width: 700px;
+	}
+
+	div.archiveContainer {
 		width: 700px;
 	}
 
@@ -858,6 +934,10 @@ img#header {
 		width: 600px;
 	}
 
+	div.archiveContainer {
+		width: 600px;
+	}
+
 	div.header {
 		width: 600px;
 	}
@@ -892,6 +972,11 @@ img#header {
 	div.thumbContainer {
 		width: 400px;
 	}
+
+	div.archiveContainer {
+		width: 400px;
+	}
+
 	div.aboutContainer {
 		width: 400px;
 	}
@@ -899,6 +984,10 @@ img#header {
 	div.thumb {
 		width: 100%;
 		margin-bottom: 20px;
+	}
+
+	div.archive {
+		height: 50px;
 	}
 
 	div.standard {
@@ -952,6 +1041,11 @@ img#header {
 	}
 
 	div.thumbContainer {
+		width: auto;
+		padding:0 20px;
+	}
+
+	div.archiveContainer {
 		width: auto;
 		padding:0 20px;
 	}

@@ -2,7 +2,7 @@ var docWidth = $(document).width();
 
 // for index.html
 function lightboxClick () {
-	$("div.standard, div.featured").click(function() {
+	$("div.standard, div.featured, h4.archive").click(function() {
 		openContent();
 	});
 
@@ -56,7 +56,7 @@ $(document).keyup(function(e) {
 });
 
 function idClick () {
-	$("div.standard, div.featured").click(function() {
+	$("div.standard, div.featured, h4.archive").click(function() {
 		var thisID = $(this).attr("id")
 		for (var i = 0; i < content.length; i++) {
 			if (content[i].title == thisID) {
@@ -99,14 +99,21 @@ idClick();
 function addThumb() {
 	var contentThumbs = [];
 	for (var i = 0; i < content.length; i++) {
-		$("div.thumbContainer").append('<div class="thumb" data-id="'+ i + '"></div>');
-		contentThumbs[i] = new thumbnail(content[i].title, content[i].thumbText, content[i].thumbType, i);
 		if (content[i].thumbType == "standard" || content[i].thumbType == "featured") {
+			$("div.thumbContainer").append('<div class="thumb" data-id="'+ i + '"></div>');
+			contentThumbs[i] = new thumbnail(content[i].title, content[i].thumbText, content[i].thumbType, i);
 			contentThumbs[i].popThumb();
 			contentThumbs[i].addImage();
-		} else {
+		} else if (content[i].thumbType == "pullout") {
+			$("div.thumbContainer").append('<div class="thumb" data-id="'+ i + '"></div>');
+			contentThumbs[i] = new thumbnail(content[i].title, content[i].thumbText, content[i].thumbType, i);
 			contentThumbs[i].addPullOut();
 			contentThumbs[i].addBlank();
+		} else if (content[i].thumbType == "archive") {
+			$("div.archiveContainer").append('<div class="thumb archive" data-id="'+ i + '"></div>');
+			contentThumbs[i] = new thumbnail(content[i].title, content[i].thumbText, content[i].thumbType, i);
+			// contentThumbs[i].popThumb();
+			contentThumbs[i].addArchive();
 		}
 	};
 	lightboxClick();
