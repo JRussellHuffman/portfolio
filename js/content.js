@@ -2,12 +2,12 @@ var content = [
 	{
 		"title" : "qiskit_textbook",
 		"thumbText" : "Qiskit Textbook",
-		"thumbType" : "featured",
+		"thumbType" : "removed",
 	},
 	{
 		"title" : "qiskit_site",
 		"thumbText" : "Qiskit.org Design Lead",
-		"thumbType" : "archive",
+		"thumbType" : "removed",
 	},
 	{
 		"title" : "table",
@@ -17,13 +17,13 @@ var content = [
 	{
 		"title" : "discovery",
 		"thumbText" : "IBM Watson Discovery",
-		"thumbType" : "standard",
+		"thumbType" : "removed",
 	},
-	{
-		"title" : "none",
-		"thumbText" : "Design for quantum computing",
-		"thumbType" : "pullout",
-	},
+	// {
+	// 	"title" : "none",
+	// 	"thumbText" : "Design for quantum computing",
+	// 	"thumbType" : "pullout",
+	// },
 	{
 		"title" : "public",
 		"thumbText" : "Public Development",
@@ -32,12 +32,12 @@ var content = [
 	{
 		"title" : "qiskit_brand",
 		"thumbText" : "Qiskit Brand",
-		"thumbType" : "standard",
+		"thumbType" : "removed",
 	},
 	{
 		"title" : "IQX",
 		"thumbText" : "IBM Quantum Experience",
-		"thumbType" : "standard",
+		"thumbType" : "removed",
 	},
 	{
 		"title" : "teleportation",
@@ -49,21 +49,21 @@ var content = [
 		"thumbText" : "Explorers Beacon Project",
 		"thumbType" : "archive",
 	},
-	{
-		"title" : "none",
-		"thumbText" : "Design for AI",
-		"thumbType" : "pullout",
-	},
+	// {
+	// 	"title" : "none",
+	// 	"thumbText" : "Design for AI",
+	// 	"thumbType" : "pullout",
+	// },
 	{
 		"title" : "compare",
 		"thumbText" : "Watson Compare & Comply",
-		"thumbType" : "standard",
+		"thumbType" : "removed",
 	},
-	{
-		"title" : "none",
-		"thumbText" : "Design for people",
-		"thumbType" : "pullout",
-	},
+	// {
+	// 	"title" : "none",
+	// 	"thumbText" : "Design for people",
+	// 	"thumbType" : "pullout",
+	// },
 	{
 		"title" : "sketchbook",
 		"thumbText" : "My GA Sketchbook",
@@ -82,7 +82,7 @@ var content = [
 	{
 		"title" : "giants",
 		"thumbText" : "Giants in the Sky",
-		"thumbType" : "archive",
+		"thumbType" : "standard",
 	},
 	{
 		"title" : "wedding",
@@ -92,13 +92,13 @@ var content = [
 	{
 		"title" : "clientcenters",
 		"thumbText" : "IBM Quantum client center design",
-		"thumbType" : "archive",
+		"thumbType" : "removed",
 	},
-	{
-		"title" : "none",
-		"thumbText" : "Design for the future",
-		"thumbType" : "pullout",
-	},
+	// {
+	// 	"title" : "none",
+	// 	"thumbText" : "Design for the future",
+	// 	"thumbType" : "pullout",
+	// },
 	{
 		"title" : "ithemba",
 		"thumbText" : "Mapping iThemba",
@@ -107,7 +107,7 @@ var content = [
 	{
 		"title" : "dollar",
 		"thumbText" : "Dollar Bill Buying Power",
-		"thumbType" : "archive",
+		"thumbType" : "standard",
 	},
 	// {
 	// 	"title" : "none",
@@ -115,13 +115,13 @@ var content = [
 	// 	"thumbType" : "archive",
 	// },
 	{
-		"title" : "ducks",
-		"thumbText" : "Wild Ducks Playing Cards",
+		"title" : "alphabet",
+		"thumbText" : "Quantum Alphabet",
 		"thumbType" : "standard",
 	},
 	{
-		"title" : "alphabet",
-		"thumbText" : "Quantum Alphabet",
+		"title" : "ducks",
+		"thumbText" : "Collaborative Playing Cards",
 		"thumbType" : "standard",
 	},
 	{
