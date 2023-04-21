@@ -2,7 +2,7 @@ var docWidth = $(document).width();
 
 // for index.html
 function lightboxClick () {
-	$("div.standard, div.featured, h4.archive").click(function() {
+	$("div.standard, div.featured, div.removed, h4.archive").click(function() {
 		openContent();
 	});
 
@@ -56,7 +56,7 @@ $(document).keyup(function(e) {
 });
 
 function idClick () {
-	$("div.standard, div.featured, h4.archive").click(function() {
+	$("div.standard, div.featured, div.removed, h4.archive").click(function() {
 		var thisID = $(this).attr("id")
 		for (var i = 0; i < content.length; i++) {
 			if (content[i].title == thisID) {
@@ -122,6 +122,20 @@ function addThumb() {
 
 addThumb();
 
+function addPrivate() {
+	var contentThumbs = [];
+	for (var i = 0; i < content.length; i++) {
+		if (content[i].thumbType == "removed") {
+			$("div.privateContainer").append('<div class="thumb" data-id="'+ i + '"></div>');
+			contentThumbs[i] = new thumbnail(content[i].title, content[i].thumbText, content[i].thumbType, i);
+			contentThumbs[i].popThumb();
+			contentThumbs[i].addImage();
+		}
+	};
+	lightboxClick();
+	idClick();
+}
+
 function thumbRollover() {
 	$("div.thumb").hover(hoverIn, hoverOut);
 }
@@ -144,7 +158,9 @@ thumbRollover();
 var contentHash;
 
 function checkHash() {
+	console.log("did the check hash thing");
 	if(window.location.hash) {
+		console.log("got here")
 	  var withHash = window.location.hash;
 	  contentHash = withHash.slice( 1 ); //remove the hash and store just the value
 	  console.log(contentHash);
@@ -254,6 +270,17 @@ function smoothScroll () {
 		return false;
 
 	});
+}
+
+function getValue() {
+	var input = document.getElementById("input-text").value;
+	if (input == "PrivateProjects") {
+		// document.getElementById("output").innerHTML = "Private projects have been added above.";
+		addPrivate();
+		thumbRollover();
+	} else {
+		console.log("incorrect...");
+	}
 }
 
 //call functions

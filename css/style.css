@@ -218,6 +218,21 @@ div.archiveContainer {
 	width: 1800px;
 }
 
+div.privateContainer {
+    overflow: auto;
+}
+
+div.privateTrigger {
+	text-align: center;
+}
+input#input-text {
+	padding:20px;
+}
+button#private-button {
+    margin-left: 20px;
+    padding: 20px;
+}
+
 img.thumb {
 	width: 100%;
 	height: 100%;
@@ -1092,5 +1107,8 @@ img#header {
 		float:right;
 		width: 100%;
 		margin:0 0 20px 20px;
+	}
+	input#input-text {
+		max-width:80%;
 	}
 }
