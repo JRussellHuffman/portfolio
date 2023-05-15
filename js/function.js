@@ -278,8 +278,9 @@ function getValue() {
 		// document.getElementById("output").innerHTML = "Private projects have been added above.";
 		addPrivate();
 		thumbRollover();
+		document.getElementById("output").innerHTML = "";
 	} else {
-		console.log("incorrect...");
+		document.getElementById("output").innerHTML = "The password you entered is incorrect";
 	}
 }
 

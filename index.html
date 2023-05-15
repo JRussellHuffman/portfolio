@@ -102,24 +102,24 @@
 	</div>
 	<div class="container">
 		<div class="title">
-			<h2 class="title">Archive</h2>
-			<span>(Old projects that didn't make the cut. View at your own risk)</span>
+			<h2 class="title">Private Projects</h2>
+			<span>These projects include enterprise software and other large scale projects. Enter the password below to see more.</span>
 		</div>
-		<div class="archiveContainer">
+		<div class="privateTrigger">
+			<input type="password" id="input-text">
+			<button onclick="getValue()" id="private-button">Show Projects</button>
+			<p id="output"></p>
+		</div>
+		<div class="privateContainer">
 			<!-- archived project dynamically added here -->
 		</div>
 	</div>
 	<div class="container">
 		<div class="title">
-			<h2 class="title">Private Projects</h2>
-			<span>Enter the password below to see private projects</span>
+			<h2 class="title">Archive</h2>
+			<span>Old projects that didn't make the cut. View at your own risk.</span>
 		</div>
-		<div class="privateTrigger">
-			<input type="password" id="input-text">
-			<button onclick="getValue()" id="private-button">Show Projects</button>
-			<!-- <p id="output">the output value goes here</p> -->
-		</div>
-		<div class="privateContainer">
+		<div class="archiveContainer">
 			<!-- archived project dynamically added here -->
 		</div>
 	</div>
