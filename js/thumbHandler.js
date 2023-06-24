@@ -7,7 +7,10 @@ function thumbnail (ti, te, ty, num) {
 	//small left div
 	this.popThumb = function popThumb() {
 		var activeDiv = "div[data-id='"+ this.itemNumber + "']";
-		$(activeDiv).html('<span class="thumb">' + this.itemText + '</span>');
+		$(activeDiv).html(
+			'<span class="thumb">' + this.itemText + 
+			'<span class="view-project">Project write-up →</span>'
+			);
 		$(activeDiv).attr('id', this.itemTitle);
 		$(activeDiv).addClass(this.itemType);
 	}

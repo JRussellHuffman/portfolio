@@ -4,6 +4,7 @@
 	<p class="pop">To honor that legacy, I recreated the image, but instead of using pulsar data, I’m using data from a quantum computer. Try the web app <a href="http://jrussellhuffman.com/joyvazirani/">here</a>, and read on to understand how to use a quantum computer to create a similar image of your own.</p>
 </div>
 <img class="writeup_image" src="projects/joy/qiskit.png" alt="Image of data from a quantum computer styled like the Unknown Pleasures album artwork.">
+<p class="caption"><i>Image of data from a quantum computer styled like the Unknown Pleasures album artwork.</i></p>
 <div class="popText">
 	<h3 class="pop">Drawing with a quantum computer</h3>
   <p class="pop">This image was created with a quantum computer. Even better, this image is a word written by a quantum computer, reading “Qiskit”. Each line shows the amplitude of the binary representation of the letters of “Qiskit” as an output of the Bernstein-Vazirani algorithm.</p>
@@ -12,16 +13,19 @@
   <p class="pop">For our purposes here, the important part is that unlike regular (or classical) computers, quantum computers use the effects of interference, a behavior only found in quantum physics, to get to a right answer in less steps. These computers are manipulating really delicate states which have lots of errors and may not get the right answer all the time, so we run an algorithm over and over to amplify the right answer. For example, a typical result from a quantum computer looks something like this.</p>
 </div>
 <img class="writeup_image" src="projects/joy/histogram1.png" alt="Image of data from a quantum computer displayed as a histogram">
+<p class="caption"><i>Image of data from a quantum computer displayed as a histogram</i></p>
 <div class="popText">
   <p class="pop">Whatever the quantum computer was trying to compute, we can see that the right answer is that tall column in the middle. All those other little bars in our histogram are a result noise. Today's quantum computers aren't perfect, so there will be noise in our results, but in this case, our correct answer is still fairly clear. For the sake of creating a visualization, I think the noise is beautiful and adds to the final effect. Once quantum computers are fully fault tolerant, this visualization will be a lot more boring. For once, the noise is a good thing.</p>
   <p class="pop">So what is it calculating, and what is the answer? Let's add some more data to our histogram.</p>
 </div>
 <img class="writeup_image" src="projects/joy/histogram2.png" alt="Image of the probabilities of computational basis states">
+<p class="caption"><i>Image of the probabilities of computational basis states</i></p>
 <div class="popText">
   <p class="pop">As you can see, each bar is labeled with a series of 0s and 1s. These are 7 bit binary strings, and our amplified answer is "1010001", which is binary for the letter "Q". This means that our quantum computer is amplifying the letter Q, the first letter of Qiskit, which is exactly what we want! (For those really paying attention, text to binary is often written as 8 bits, starting with a 0 or 0b, but more on that later in the FAQs).</p>
   <p class="pop">From here, I exported the data as a&nbsp;.csv file and styled it to look like a line from the famous album artwork using Apple Numbers and Adobe Illustrator. The amplitudes may look slightly different because the below image uses all the data provided by the quantum computer, while the above is just a summary.</p>
 </div>
 <img class="writeup_image" src="projects/joy/Q.png" alt="Quantum computing data representing the letter &quot;Q&quot; styled like the Unknown Pleasures album artwork.">
+<p class="caption"><i>Quantum computing data representing the letter Q styled like the Unknown Pleasures album artwork.</i></p>
 <div class="popText">
   <h3 class="pop">How does a quantum computer "compute" the letter Q?</h3>
   <p class="pop">That's where the Bernstein-Vazirani algorithm comes in, which you can read all about it in depth <a href="https://qiskit.org/textbook/ch-algorithms/bernstein-vazirani.html" target="_blank">here</a>. Or instead, here is a quick summary: There is a function that behaves in a particular way that depends on some unknown string of binary (0's and 1's), called an oracle. We encode the letters by first converting them to binary and then putting them into the oracle with quantum logic gates. We then ask the quantum computer to find the value of the oracle as a quantum state, which we can measure. Because of the noise associated with current quantum computers, we run the algorithm multiple times to see how the function operates in order to figure out what oracle is driving the function's behavior, giving us our amplitudes as shown above.</p>
@@ -31,6 +35,7 @@
   <p class="pop">For one last example, here is a mock up on a shirt that reads "qiskit terra aqua aer ignis" without spaces.</p>
 	</div>
   <img class="writeup_image" src="projects/joy/shirt.jpg" alt="Quantum computing data representing the letter &quot;Q&quot; styled like the Unknown Pleasures album artwork.">
+  <p class="caption"><i>Quantum computing data for "Quantum Information Science Kit" styled like the Unknown Pleasures album artwork.</i></p>
 <div class="popText">
   <h3 class="pop">Frequently asked questions</h3>
   <p  class="pop"><b>Why the minor inaccuracies in the amplitudes?</b></p>
@@ -40,14 +45,17 @@
   <p class="pop">In the example above, the circuits were run on "ibmq-paris", which the qubit connectivity looks like the following:</p>
 </div>
 	<img class="writeup_image" src="projects/joy/connectivity.png" alt="Qubit connnetivity diagram for the quantum backend &quot;ibmq-paris&quot;">
+  <p class="caption"><i>Qubit connnetivity diagram for the quantum backend that was used</i></p>
 <div class="popText joy">
   When the circuit for "Q" was transpiled for this hardware, it looks like this:
 </div>
   <img class="writeup_image" src="projects/joy/circuit1.png" alt="Transpiled circuit for the letter &quot;Q&quot;">
+  <p class="caption"><i>Transpiled circuit for the letter Q</i></p>
 <div class="popText joy">
   However, when the circuit for "k" was run, it was transpiled to look like this:
 </div>
   <img class="writeup_image" src="projects/joy/circuit2.png" alt="Transpiled circuit for the letter &quot;k&quot;">
+  <p class="caption"><i>Transpiled circuit for the letter K</i></p>
 <div class="popText">
   <p class="pop">The second circuit is a fair bit longer (or as we say, has a greater depth), which makes it more difficult to maintain accuracy. The longer (in depth) a circuit is, the longer (in time) it takes to execute, which means more opportunity for noise to get into the system. Each letter looks a little different, so some letters will be less accurate than others.</p>
   <p class="pop"><b>Why only 7 bits instead of 8 to represent a letter?</b></p>

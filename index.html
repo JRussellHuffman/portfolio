@@ -15,28 +15,23 @@
 	<script type="text/javascript" src="js/xray.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700,600,500,400,300,200,100' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;600&display=swap" rel="stylesheet">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- favicons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+
 	<link rel="manifest" href="favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+
+
 
 	<!-- google recaptcha -->
 	<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -82,28 +77,39 @@
 		    </div>
 		</div>
 	</div>
+	<!-- begin testing the javascript effect -->
+	<div id="text">
+	<!-- content generated with JS -->  
+	</div>
+	<!-- end testing javascript effect -->
 	<div class="headPadding" id="top"></div>
 	<div class="deskContainer">
-		<canvas id="overlayCanvas"></canvas>
+		<img id="hero" src="assets/hero.svg">
+		<!-- <canvas id="overlayCanvas"></canvas> -->
 		<!-- <img id="header" src="assets/quantum_walks.png" alt=""> -->
 		<div class="tagline">
-			<h1 class="tagline">Art, Design, Technology, and the places they collide</h1>
+			<h1 class="tagline">Humanizing emerging technology through design</h1>
+			<div class="intro">
+				<span class="intro">I am a product designer with over 10 years experience working with emerging technology, including quantum computing, AI, and much more.</span>
+				<br>
+				<br>
+				<span class="intro">Scroll on to learn more.</span>
+				<br>
+				<br>
+				<span class="intro">
+					<a href="#design">↓</a></span>
+				</spa>
+			</div>	
 		</div>
     </div>
     <div class="canvasSpacer"></div>
     <div class="hash" id="design"></div>
-    <div class="container">
-	    <div class="title">
-	    	<h1 class="title">Design Projects</h1>
-	    </div>
-		<div class="thumbContainer">
-			<!-- project dynamically added here -->
-		</div>
-	</div>
-	<div class="container">
+    <div class="container"  id="software">
 		<div class="title">
-			<h2 class="title">Private Projects</h2>
-			<span>These projects include enterprise software and other large scale projects. Enter the password below to see more.</span>
+			<h1 id="software" class="title">Software Product Design</h1>
+			<div class="copy-container">
+				<span>My primary portfolio includes enterprise software for quantum computing and AI. Enter the password below or contact me to see this section of my portfolio.</span>
+			</div>
 		</div>
 		<div class="privateTrigger">
 			<input type="password" id="input-text">
@@ -114,10 +120,23 @@
 			<!-- archived project dynamically added here -->
 		</div>
 	</div>
+    <div class="container">
+	    <div class="title">
+	    	<h1 class="title">Other Design Projects</h1>
+	    	<div class="copy-container">
+				<span>These are projects ranging from exhibitions to art installations to crowd sourced initiatives.</span>
+			</div>
+	    </div>
+		<div class="thumbContainer">
+			<!-- project dynamically added here -->
+		</div>
+	</div>
 	<div class="container">
 		<div class="title">
 			<h2 class="title">Archive</h2>
-			<span>Old projects that didn't make the cut. View at your own risk.</span>
+			<div class="copy-container">
+				<span>Old projects that didn't make the cut. View at your own risk.</span>
+			</div>
 		</div>
 		<div class="archiveContainer">
 			<!-- archived project dynamically added here -->
@@ -127,101 +146,129 @@
 	<div class="container">
 		<div class="title">
 	    <h1 class="title">About Me</h1>
+
+			
 	    </div>
-			<div class="video-container">
-	    	<iframe width="100%" height="600" src="https://www.youtube.com/embed/4fwOOnHPQFo" frameborder="0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<!-- <div class="video-container">
+	    		<iframe id="russell-doc" width="100%" height="600" src="https://www.youtube.com/embed/4fwOOnHPQFo" frameborder="0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 				<!-- the old one https://www.youtube.com/embed/Eg9l_yNvsnk -->
-	    </div>
+	    	<!-- </div> -->
 	    <!-- <div class="resume"><a href="assets/JRussellHuffman_Resume5-16-16.pdf" target="_blank" class="resume"><h1>Open Resum&eacute; PDF</h1></a></div> -->
 	    <div class="aboutContainer">
 	    	<div class="about" id="aboutText">
-	    		<div id="me">
+	    		<!-- <div id="me">
 	    			<img src="assets/me-3.jpg">
-	    		</div>
-	    		<h2 id="contactSection">Connect with me</h2>
+	    		</div> -->
+	    		<!-- <h2 id="contactSection">Connect with me</h2>
 				<a href="mailto:jrussellhuffman@gmail.com" target="_blank">jrussellhuffman@gmail.com</a><br>
 				<a href="https://www.instagram.com/jrussellhuffman/" target="_blank">Instagram</a><br>
 				<a href="https://github.com/JRussellHuffman" target="_blank">Github</a><br>
 				<a href="https://www.behance.net/jrussellhuffman" target="_blank">Behance</a><br>
 
-				<h2>Who I am</h2>
+				<h2>Who I am</h2> -->
 
-				<p>My name is Joel Russell Huffman but most people call me Russell. I am a designer, technology enthusiast, maker, and artist based out of Austin, Texas. My goal as a creative is to take emerging technology out of the lab and into the hands of masses. I have spent the past 6 years as a user experience designer in the fields of quantum computing and AI, but have been lucky enough to work in various capacities including interpretive design and front end development. When I am not trying to untangle the mysteries of quantum computing, I am cooking, gardening, or playing guitar. The process of doing and creating drives me. I absolutely love working in complicated domains and I am grateful that I can help others through my creativity.</p>
+				<div class="resume-section">
+					<div class="resume-header">
+						<h2 class="resume">Summary</h2>
+						<!-- <div id="me">
+			    			<img src="assets/me-3.jpg">
+			    		</div> -->
+					</div>
+					<div class="resume-body">
+						<p>My name is Joel Russell Huffman but most people call me Russell. I am currently the product owner for IBM Quantum’s digital education theme, leading an interdisciplinary product team of engineers, designers, writers, and quantum researchers across 6 time zones. I am trained as a product designer with over 12 years of experience, specializing in emerging technology, primarily quantum computing and artificial intelligence.</p>
+						<!-- <p>I am also heavily invested in creative applications of quantum computing, as shown in the video below.</p> -->
+					</div>
+				</div>
+				<div class="resume-section">
+					<div class="resume-header">
+						<h2 class="resume">Experience</h2>
+					</div>
+					<div class="resume-body">
+						<h2>IBM</h2>
+						<h3 class="resume">July 2016 to Present - Design Lead</h3>
+						<p class="resume">As the design lead for the Qiskit team within IBM Quantum, I lead the design of IBM Quantum’s education platform, known as the Qiskit Textbook. To date, this platform is the industry leader for learning quantum computing where we support over 50K monthly active users as well as over 1B quantum executions to date.</p>
 
-				<h2>Education</h2>
-				<p>MS in Digital Media at Georgia Tech.<br>
-					GPA: 4.0<br>
-					Graduated Spring 2016</p>
+						<h2>Georgia Institute of Technology</h2>
+						<h3 class="resume">August 2014 to May 2016 - Research & teaching Assistant</h3>
+						<p class="resume">As a teaching assistant, my role was to assist in leading lessons for the Intro to Computational Media class of over 75 undergraduate computer science students, lead workshops outside of class, and grade papers, assignments, and projects. As a research assistant, my role was to Identify and develop platform needs and to conduct product and literature reviews of existing platforms/processes and develop supporting infrastructure that enable project studio work to proceed.</p>
 
-				<p>BA in Fine Art from Georgia College and State University.<br>
-					GPA: 3.6<br>
-					Graduated Spring 2012</p>
+
+						<h2>Porsche Cars North America</h2>
+						<h3 class="resume">April 2015 to Sept 2015 - Intern Web Development Engineer</h3>
+						<p class="resume">As a teaching assistant, my role was to assist in leading lessons for the Intro to Computational Media class of over 75 undergraduate computer science students, lead workshops outside of class, and grade papers, assignments, and projects. As a research assistant, my role was to Identify and develop platform needs and to conduct product and literature reviews of existing platforms/processes and develop supporting infrastructure that enable project studio work to proceed.</p>
+
+						<h2>Signature Design</h2>
+						<h3 class="resume">May 2012 to Aug 2014 - Associate Interpretive Designer</h3>
+						<p class="resume">As an associate interpretive designer, my role was to do web development, map design, computer rendering, animation, as well as marketing and consulting new clients. Projects include national heritage areas, nature preserves, historic neighborhoods, and schools.</p>
+
+						<h2>The 42nd Floor, LLC</h2>
+						<h3 class="resume">January 2011 to May 2012 - Graphic Designer and Assistant Manager </h3>
+						<p class="resume">As a graphic designer and assistant manager, my role was to design custom apparel, consult and correspond with clientele, and manage the storefront. Work included on-the-spot graphic design for clients in Photoshop and on-the-spot printing of garments. </p>
+
+					</div>
+				</div>
+				<div class="resume-section">
+					<div class="resume-header">
+						<h2 class="resume">Education</h2>
+					</div>
+					<div class="resume-body">
+						<h2>Master of Science in Digital Media at Georgia Tech.</h2>
+						<p>GPA: 4.0</p>
+						<p>Graduated Spring 2016</p>
+
+						<h2>Bachelor of Art in Fine Art from Georgia College and State University.</h2>
+						<p>GPA: 3.6</p>
+						<p>Graduated Spring 2012</p>
+					</div>
+				</div>
+				<div class="resume-section">
+					<div class="resume-header">
+						<h2 class="resume">Accomplishments</h2>
+					</div>
+					<div class="resume-body">
+						<h2>Intellectual Property Developmentt</h2>
+						<p>From 2016 to present, I have been involved in creating and disclosing inventions, which have resulted in 9 patents filed with the US patent office, including 5 quantum computing patents.
+						<br>
+						<a href="https://patents.justia.com/inventor/joel-russell-huffman" target="_blank">More info</a></p>
+
+						<h2>SxSW Speaker</h2>
+						<p>I was invited to be a panel speaker at SxSW in 2022 by The New School's Innovation Center on a panel called "Quantum Computing for Design and Social Good" to discuss my collaboration with them on the Quantum Design Jam, an event where we introduced quantum computing to artists and designers.
+							<br>
+							<a href="https://www.youtube.com/watch?v=q6DuDEf3oCo" target="_blank">More info</a>
+					</p>
+
+						<h2>Sotheby's Art</h2>
+						<p>In 2022 I collaborated with AI artist Pindar Van Arman to create an artwork called Quantum Skull that was exhibited at Sotheby's. To the best of our knowledge, this was the first artwork that utilizes quantum computing to be sold at a Sotheby’s auction.
+							<br>
+							<a href="https://www.sothebys.com/en/buy/auction/2022/natively-digital-1-3-generative-art/quantum-skull" target="_blank">More info</a>
+						</p>
+
+						<h2>Manhattan Art Installation</h2>
+						<p>In 2022 I completed an artwork called Teleportation Disk installed in an IBM office in New York City. The piece is the first of its kind in that it uses a real quantum computer to procedurally generate the artwork.
+							<br>
+							<a href="https://medium.com/qiskit/quantum-art-installation-lands-in-new-york-city-44edb8ea9291" target="_blank">More info</a>
+						</p>
+						<h2>Quantum Art Exhibition</h2>
+						<p>Since 2020, I have built a relationship with The New School’s Innovation Center and the Parson School of Design in New York City by doing quantum computing hackathons and guest lectures. In March of 2023, I organized an art exhibition in partnership between IBM and The New School where every artwork utilizes quantum computing.
+							<br>
+							<a href="https://medium.com/qiskit/exhibition-ready-quantum-image-processing-4bb9fa8b52b5" target="_blank">More info</a>
+						</p>
+						<h2>Wild Ducks Playing Cards</h2>
+						<p>I organized and led the Wild Ducks Playing Cards, a project where artists from around the world each illustrate a single card for a deck of cards. The project was done 3 different times over the course of 3 years, and in total included over 120 artists from over 25 countries and 6 continents.
+							<br>
+							<a href="https://medium.com/design-ibm/wild-ducks-playing-cards-940d6432165c" target="_blank">More info</a>
+						</p>
+						<h2>Successful Kickstarter campaign</h2>
+						<p>In late 2016 I ran a kickstarter campaign for a hand illustrated deck of cards. The project reached 100% funding in the first 24 hours and was ultimately funded over 300%.
+							<br>
+							<a href="https://www.kickstarter.com/projects/1599451087/hatched-playing-cards" target="_blank">More info</a>
+						</p>
+					</div>
+				</div>
+
 
 				<!-- <p>Being creative is my passion. When I was 16, I discovered my love for the visual arts and eventually came to study fine art at GCSU. College afforded me the opportunity to explore all mediums, where I discovered that working on the computer allows me to best express myself. After graduation I worked in interpretation design working with cultural history and storytelling. This lead me to graduate school where I studied Digital Media at Georgia Tech, where I recently graduated. I love working with storytelling, cultural history, civic engagement, and education applications of new media. If any of this sounds interesting to you, please reach out to me! I love talking about my passions.</p> -->
 			</div>
-    	<div class="about" id="resume">
-	    		<!-- <a href="assets/JRussellHuffman_Resume1-20-16.pdf" target="_blank" class="resume"><h1>Open Resum&eacute; PDF</h1></a> -->
-				<!-- <h1 class="title">Work Experience</h1> -->
-				<h2>IBM</h2>
-				<h3>July 2016 to Present - Design Lead</h3>
-				<p>Responsibilities: Lead the design efforts across Qiskit, IBM's open source quantum computing effort,  with a primary focus on education. My efforts including leading the design of the Qiskit.org domain, the Qiskit textbook, and the rest of the Qiskit digital properties, as well as establishing brand standards.</p>
-
-				<h2>Georgia Institute of Technology</h2>
-				<h3>August 2014 to May 2016 - Research & teaching Assistant</h3>
-				<p>Responsibilities: As a teaching assistant, my role was to assist in leading lessons for the Intro to Computational Media class of over 75 undergraduate computer science students, lead workshops outside of class, and grade papers, assignments, and projects. As a research assistant, my role was to Identify and develop platform needs and to conduct product and literature reviews of existing platforms/processes and develop supporting infrastructure that enable project studio work to proceed.</p>
-
-				<!-- <h2>Georgia Institute of Technology</h2>
-				<h3>August 2015 to December 2015 - Teaching Assistant</h3>
-				<p>Responsibilities: assist in leading lessons for the Intro to Computational Media class of over 75 undergraduate students, lead workshops outside of class, and grade papers, assignments, and projects</p> -->
-
-				<h2>Porsche Cars North America</h2>
-				<h3>April 2015 to Sept 2015 - Intern Web Development Engineer</h3>
-				<p>Responsibilities: Prototype and develop interactive applications and manage digital content as a part of the Digitalization team within Porsche Cars North America.</p>
-
-				<!-- <h2>Georgia Institute of Technology</h2>
-				<h3>August 2014 to December 2015 - Research Assistant</h3>
-				<p>Responsibilities: designing, illustrating and programming an interactive map to visualize research on pharmaceutical production in Johannesburg, South Africa. </p> -->
-
-
-				<h2>Signature Design</h2>
-				<h3>May 2012 to Aug 2014 - Associate Interpretive Designer</h3>
-				<p>Responsibilities: Web design, map design, computer rendering, animation, as well as marketing and consulting new clients. Projects include national heritage areas, nature preserves, historic neighborhoods, and schools</p>
-
-
-				<!-- <h2>AllPoints, LLC (Peachtree City, GA)
-				November 2013 to February 2014, Director of Motion Graphics </h2>
-				<p>Responsibilities: creation of digital media components for various projects, such as video game assets, introductions and credits to videos, company branding, graphic elements, and illustrations for promotions.</p> -->
-
-
-				<h2>The 42nd Floor, LLC</h2>
-				<h3>January 2011 to May 2012 - Graphic Designer and Assistant Manager </h3>
-				<p>Responsibilities: Graphic design for custom apparel, consultation and correspondence with clientele, and management of storefront. Work included on-the-spot graphic design for clients in Photoshop and on-the-spot printing of garments. </p>
-				<h1>Accomplishments</h1>
-
-				<h2>Sotheby's Art</h2>
-				<p>In 2022 I collaborated with AI artist <a href="https://www.cloudpainter.com/" target="_blank">Pindar Van Arman</a> to create an artwork called <a href="https://www.cloudpainter.com/quantum-skull" target="_blank">Quantum Skull</a> that was exhibited at <a href="https://www.sothebys.com/en/buy/auction/2022/natively-digital-1-3-generative-art/quantum-skull" target="_blank">Sotheby's</a>. To the best of our knowledge, this was the first artwork that utilizes quantum computing at auction.</p>
-
-				<h2>SxSW Speaker</h2>
-				<p>I was invited to be a panel speak at SxSW in 2022 by The New School's Innovation Center on a panel called "Quantum Computing for Design and Social Good" to discuss my collaboration with them on the <a href="http://innovationcenter.newschool.edu/about-the-quantum-design-jam/" target="_blank">Quantum Design Jam</a>, an event where we introduced quantum computing to artists. Recording of the panel can be found <a href="https://www.youtube.com/watch?v=q6DuDEf3oCo" target="_blank">here</a>.</p>
-
-				<!-- <h2>New York City art installation</h2>
-				<p>In the Spring of 2022 I completed an art installation in New York City that is located one block off of Grand Central Station in an IBM space. The installation is, to the best of my knowledge, the first and only art installation in New York City that uses quantum computing. More info on the installation can be found here (link within website).</p> -->
-
-				<h2>Patent Disclosures</h2>
-				<p>From 2016 to present, I have been involved in creating and disclosing invention, which have resulted in 9 patents filed with the US patent office, 4 of which have been issued (thus far). This is an ongoing effort with more disclosures currently in the works. Some of the patents include: <br>
-				<a href="https://patents.google.com/patent/US20210216898A1" target="_blank">US20210216898A1</a><br>
-				<a href="https://patents.google.com/patent/US11310433B1" target="_blank">US11310433B1</a><br>
-				<a href="https://patents.google.com/patent/US10893231B1" target="_blank">US10893231B1</a><br>
-				<a href="https://patents.google.com/patent/US20210357802A1" target="_blank">US20210357802A1</a>
-				</p>
-
-				<!-- <h2>Outstanding Design Achievement Award</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-
-				<!-- <h2>DVL Design Group (Roswell, GA)
-				January 2008 to June 2008, Draftsman, Renderer, and Illustrator </h2>
-				<p>Responsibilities: drafting, rendering, and illustration for landscape architecture projects in land planning and residential development. Projects required computer rendering, pencil and marker rendering, graphic design, and drafting.</p> -->
-	    	</div>
 	    </div>
 	</div>
 	<div class="hash" id="contact"></div>
@@ -253,7 +300,7 @@
 	<!-- lightbox -->
 	<div class="lightbox">
 		<div class="bg"></div>
-		<div class="side" id="close"><h3>X</h3></div>
+		<div class="side" id="close"><h3>x</h3></div>
 		<!-- <div class="side" id="open"><h3>open in new tab</h3></div> -->
 		<div class="fg" id="content">
 			<div class="project">

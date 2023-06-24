@@ -5,10 +5,15 @@ var content = [
 		"thumbType" : "removed",
 	},
 	{
-		"title" : "qiskit_site",
-		"thumbText" : "Qiskit.org Design Lead",
+		"title" : "IQX",
+		"thumbText" : "IBM Quantum Experience",
 		"thumbType" : "removed",
 	},
+	// {
+	// 	"title" : "qiskit_site",
+	// 	"thumbText" : "Qiskit.org Design Lead",
+	// 	"thumbType" : "removed",
+	// },
 	{
 		"title" : "table",
 		"thumbText" : "Trees Atlanta Table",
@@ -17,6 +22,16 @@ var content = [
 	{
 		"title" : "discovery",
 		"thumbText" : "IBM Watson Discovery",
+		"thumbType" : "removed",
+	},
+	{
+		"title" : "compare",
+		"thumbText" : "Watson Compare & Comply",
+		"thumbType" : "removed",
+	},
+	{
+		"title" : "qiskit_brand",
+		"thumbText" : "Qiskit Brand",
 		"thumbType" : "removed",
 	},
 	// {
@@ -28,16 +43,6 @@ var content = [
 		"title" : "public",
 		"thumbText" : "Public Development",
 		"thumbType" : "archive",
-	},
-	{
-		"title" : "qiskit_brand",
-		"thumbText" : "Qiskit Brand",
-		"thumbType" : "removed",
-	},
-	{
-		"title" : "IQX",
-		"thumbText" : "IBM Quantum Experience",
-		"thumbType" : "removed",
 	},
 	{
 		"title" : "teleportation",
@@ -54,11 +59,6 @@ var content = [
 	// 	"thumbText" : "Design for AI",
 	// 	"thumbType" : "pullout",
 	// },
-	{
-		"title" : "compare",
-		"thumbText" : "Watson Compare & Comply",
-		"thumbType" : "removed",
-	},
 	// {
 	// 	"title" : "none",
 	// 	"thumbText" : "Design for people",
@@ -70,13 +70,13 @@ var content = [
 		"thumbType" : "archive",
 	},
 	{
-		"title" : "domes",
-		"thumbText" : "Homes to Domes",
+		"title" : "porsche",
+		"thumbText" : "Porsche Digitalization",
 		"thumbType" : "featured",
 	},
 	{
-		"title" : "porsche",
-		"thumbText" : "Porsche Digitalization",
+		"title" : "domes",
+		"thumbText" : "Homes to Domes",
 		"thumbType" : "standard",
 	},
 	{
@@ -89,11 +89,11 @@ var content = [
 		"thumbText" : "Happy Huffmans",
 		"thumbType" : "archive",
 	},
-	{
-		"title" : "clientcenters",
-		"thumbText" : "IBM Quantum client center design",
-		"thumbType" : "removed",
-	},
+	// {
+	// 	"title" : "clientcenters",
+	// 	"thumbText" : "IBM Quantum client center design",
+	// 	"thumbType" : "removed",
+	// },
 	// {
 	// 	"title" : "none",
 	// 	"thumbText" : "Design for the future",

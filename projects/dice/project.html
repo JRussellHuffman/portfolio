@@ -12,6 +12,7 @@
        <p class="pop">To get information from a quantum computer, we need a quantum circuit. To get random numbers, we need this circuit.</p>
 		 </div>
        <img src="projects/dice/circuit.png" alt="quantum circuit diagram">
+       <p class="caption"><i>Image of the quantum circuit used for this application</i></p>
 		 <div class="popText dice">
        <h3 class="pop dice">Simple explanation</h3>
        <p class="pop">This circuit uses 5 qubits, each represented by the horizontal line above. We drop gates (shown as little squares) onto a qubit to manipulate it. We want to add gates that will help give us a random number.</p>
@@ -25,6 +26,7 @@
        <p class="pop">Quantum computers aren't perfect yet, but they are still really good at giving random results. Ideally, there is an equal probability of getting any value between 0-31 (for our 5 qubit system). The histogram below shows the true probabilities from the system "ibmq_ourense", which is the system I used for this experiment.</p>
 		 </div>
        <img src="projects/dice/probabilities.png" alt="output prability image">
+       <p class="caption"><i>Images of the output probability distribution</i></p>
 		 <div class="popText dice">
        <p class="pop">It's pretty close to a uniform distribution, but not perfect. Some of the imperfection is due to sources of noise--such as errors in measurement--and some of it is due to the number of times we rolled the dice. The lower the noise and the more rolls we make, the closer the observed distribution will be to uniform.</p>
        <h3 class="pop dice">Wait again, am I really pinging a quantum computer every time I roll the dice on this app?&nbsp;</h3>
