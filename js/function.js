@@ -279,7 +279,7 @@ function smoothScroll () {
 
 function getValue() {
 	var input = document.getElementById("input-text").value;
-	if (input == "PrivateProjects" || "Private" || "Software" || "Product") {
+	if (input == "PrivateProjects" || input == "Private" || input ==  "Software" || input ==  "Product") {
 		// document.getElementById("output").innerHTML = "Private projects have been added above.";
 		addPrivate();
 		thumbRollover();
