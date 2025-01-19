@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="js/snap.svg-min.js"></script>
 	<script type="text/javascript" src="js/svgLogo.js"></script>
 	<script type="text/javascript" src="js/xray.js"></script>
+	<!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700,600,500,400,300,200,100' rel='stylesheet' type='text/css'>
@@ -90,7 +91,7 @@
 		<div class="tagline">
 			<h1 class="tagline">Humanizing emerging technology through user experience</h1>
 			<div class="intro">
-				<span class="intro">I am a product designer with over 10 years experience working with emerging technology, including quantum computing, AI, and much more.</span>
+				<span class="intro">I am a creative director and product manager with 14 years of experience working with emerging technology, including quantum computing, AI, photonics, and much more.</span>
 				<br>
 				<br>
 				<span class="intro">Scroll on to learn more.</span>
@@ -106,7 +107,7 @@
     <div class="hash" id="design"></div>
     <div class="container"  id="software">
 		<div class="title">
-			<h1 id="software" class="title">Software Product Design</h1>
+			<h1 id="software" class="title">Software Product Portfolio</h1>
 			<div class="copy-container">
 				<span>My primary portfolio includes enterprise software for quantum computing and AI. Enter the password below or contact me to see this section of my portfolio.</span>
 			</div>
@@ -122,7 +123,7 @@
 	</div>
     <div class="container">
 	    <div class="title">
-	    	<h1 class="title">Other Design Projects</h1>
+	    	<h1 class="title">Other Projects</h1>
 	    	<div class="copy-container">
 				<span>These are projects ranging from exhibitions to art installations to crowd sourced initiatives.</span>
 			</div>
@@ -175,7 +176,7 @@
 			    		</div> -->
 					</div>
 					<div class="resume-body">
-						<p>My name is Joel Russell Huffman but most people call me Russell. I am currently the UX product manager at Quantum Computing Inc where I work with an interdisciplinary team of expert in the field of quantum optics and nanophotonics. I leverage my skills in product management and design to distill those expertise into digestable and consumble material.</p>
+						<p>My name is Joel Russell Huffman but most people call me Russell. I am currently the Creative Director and UX product manager at Quantum Computing Inc where I work with an interdisciplinary team of expert in the field of quantum optics and nanophotonics. I leverage my skills in product management and design to distill those expertise into digestable and consumble material.</p>
 						<!-- <p>I am also heavily invested in creative applications of quantum computing, as shown in the video below.</p> -->
 					</div>
 				</div>
@@ -185,11 +186,11 @@
 					</div>
 					<div class="resume-body">
 						<h2>Quantum Computing Inc</h2>
-						<h3 class="resume">Aug 2023 to Present - UX Product Manager</h3>
+						<h3 class="resume">Aug 2023 to Present - Creative Director & UX Product Manager</h3>
 						<p class="resume">As the UX Product Manager at QCi, I am primarily responsible for creating and maintaining an externally facing learning and enablement platform. I am also responsible for the marketing website and company messaging.</p>
 
 						<h2>IBM</h2>
-						<h3 class="resume">July 2016 to July 2023 - Design Lead</h3>
+						<h3 class="resume">July 2016 to July 2023 - Design Lead & Manager</h3>
 						<p class="resume">As the design lead for the Qiskit team within IBM Quantum, I led the design of IBM Quantum’s education platform, known as the Qiskit Textbook. To date, this platform is the industry leader for learning quantum computing where we support over 50K monthly active users as well as over 1B quantum executions to date.</p>
 
 						<h2>Georgia Institute of Technology</h2>
@@ -282,7 +283,7 @@
 	    </div>
 	    <div class="contactContainer">
 	    	<div id="contactme">
-	            <form action="submit.php" method="post">
+	            <!-- <form action="mailto:jrussellhuffman@example.com" method="post">
 	            <div class="info">
 	                <span class="contact">Your name</span>
 	                <input type="text" name="cf_name"><br>
@@ -296,7 +297,31 @@
 	            </div>
 	            <input id="submit" type="submit" value="Send">
 	            <input id="reset" type="reset" value="Clear">
-	            </form>
+	            </form> -->
+	            <form id="form">
+				  <div class="field info">
+				    <label for="from_name">Your name</label>
+				    <input type="text" name="from_name" id="from_name">
+				    <label for="reply_to">Your email</label>
+				    <input type="email" name="reply_to" id="reply_to">
+				  </div>
+				  <div class="g-recaptcha" id="captcha" data-sitekey="6LeEHg0TAAAAAORDk6ltQjSet2RrXgIWbEM9Z0Uk"></div>
+				  <div class="field message">
+				    <label for="message">Message</label>
+				    <!-- <input type="text" name="message" id="message"> -->
+				    <textarea type="text" name="message" id="message"></textarea>
+				  </div>
+
+				  <input type="submit" id="submit" value="Send" >
+	              <input id="reset" type="reset" value="Clear">
+				</form>
+
+				<script type="text/javascript"
+				  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+				<script type="text/javascript">
+				  emailjs.init('btjbkTKHlBg1ZAT7Y')
+				</script>
 	        </div>
 	        <img src="assets/footerOverlay.png" id="buildings">
 	    </div>
@@ -316,6 +341,30 @@
 
 		$("div.logoContainer").load("logo.html");
 
+	</script>
+
+
+	<script>
+		const btn = document.getElementById('submit');
+
+		document.getElementById('form')
+		 .addEventListener('submit', function(event) {
+		   event.preventDefault();
+
+		   btn.value = 'Sending...';
+
+		   const serviceID = 'default_service';
+		   const templateID = 'template_u638zku';
+
+		   emailjs.sendForm(serviceID, templateID, this)
+		    .then(() => {
+		      btn.value = 'Send';
+		      alert('Sent!');
+		    }, (err) => {
+		      btn.value = 'Send';
+		      alert(JSON.stringify(err));
+		    });
+		});
 	</script>
 
 	<script type="text/javascript" src="js/thumbHandler.js"></script>
