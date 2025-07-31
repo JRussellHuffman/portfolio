@@ -1,5 +1,15 @@
 var content = [
 	{
+		"title" : "QCi_brand",
+		"thumbText" : "QCi Brand",
+		"thumbType" : "removed",
+	},
+	{
+		"title" : "QCi_demos",
+		"thumbText" : "QCi demos",
+		"thumbType" : "removed",
+	},
+	{
 		"title" : "qiskit_textbook",
 		"thumbText" : "Qiskit Textbook",
 		"thumbType" : "removed",
