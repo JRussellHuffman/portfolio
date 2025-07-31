@@ -1,5 +1,10 @@
 var content = [
 	{
+		"title" : "enablement",
+		"thumbText" : "QCi enablement",
+		"thumbType" : "removed",
+	},
+	{
 		"title" : "QCi_brand",
 		"thumbText" : "QCi Brand",
 		"thumbType" : "removed",
